@@ -21,11 +21,12 @@ Encoding: UTF-8
 LazyData: true
 Depends:
     R (>= 3.5)
+Imports:
+    stats,
+    utils
 Suggests:
-    covr,
     knitr,
     rmarkdown,
-    spelling,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3
@@ -33,4 +34,4 @@ Language: en-GB
 URL: https://nicholustintzaw.github.io/reiof/,
     https://github.com/nicholustintzaw/reiof
 BugReports: https://github.com/nicholustintzaw/reiof/issues
-RoxygenNote: 7.3.1
+RoxygenNote: 8.1.0

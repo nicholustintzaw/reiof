@@ -1,10 +1,15 @@
 # Builds the pkgdown site and publishes it to GitHub Pages.
 #
-# ONE-TIME SETUP, in the repository on GitHub:
-#   Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
-# Nothing else is needed; this workflow does the rest on every push to main.
+# WHY THE FIRST RUN FAILED: the repository's Pages source was set to "Deploy
+# from a branch". The actions/deploy-pages step only works when the source is
+# "GitHub Actions", so the deploy job failed and the published site 404'd.
 #
-# The site appears at https://nicholustintzaw.github.io/reiof/
+# The configure-pages step below now attempts to switch the source over
+# automatically. If it cannot (it needs the repository to allow it), set it by
+# hand once:
+#   Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
+#
+# The site is published at https://nicholustintzaw.github.io/reiof/
 
 on:
   push:
@@ -27,7 +32,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  pkgdown:
+  build:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -45,8 +50,8 @@ jobs:
           extra-packages: any::pkgdown, any::roxygen2, local::.
           needs: website
 
-      # man/ and NAMESPACE are regenerated from the roxygen comments in R/,
-      # which are the source of truth. See NEWS.md.
+      # man/ is generated from the roxygen comments in R/, which are the source
+      # of truth. pkgdown reads man/, so this has to run before the site build.
       - name: Document
         run: roxygen2::roxygenise()
         shell: Rscript {0}
@@ -54,6 +59,14 @@ jobs:
       - name: Build site
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
+
+      # Switches the Pages source to "GitHub Actions" if it is not already, and
+      # fails with a readable message rather than a bare 404 if it cannot.
+      - name: Configure Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         if: github.event_name != 'pull_request'
@@ -63,7 +76,7 @@ jobs:
 
   deploy:
     if: github.event_name != 'pull_request'
-    needs: pkgdown
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages

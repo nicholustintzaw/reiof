@@ -1,4 +1,4 @@
-# reiof (development version)
+# reiof 0.0.0.9000
 
 First working version. Implements Tables 3, 4a-4g, 5a and 5b of the Intake
 Environmental Impacts of Foods methods paper (January 2026).
@@ -20,6 +20,3 @@ Environmental Impacts of Foods methods paper (January 2026).
 * The relative benchmark cut-offs for eutrophication potential carry an
   inferred rescaling. See `vignette("reiof")`, section "A caution on
   eutrophication". Confirm with Intake before publishing eutrophication results.
-* `man/` and `NAMESPACE` were written by hand because roxygen2 was not available
-  in the environment where the package was first assembled. The roxygen comments
-  in `R/` are the source of truth; run `devtools::document()` to regenerate.

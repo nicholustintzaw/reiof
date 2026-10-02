@@ -161,7 +161,7 @@ eiof_check_impact <- function(value, name = "impact", indicator = NULL) {
 #'
 #' @section The small exponent is not the problem:
 #' R's `numeric` is an IEEE 754 double: around 15 to 17 significant decimal
-#' digits, with an exponent range to about 1e±308. A biodiversity value of
+#' digits, with an exponent range to about 1e+/-308. A biodiversity value of
 #' `3.6896e-13` is comfortably representable, and comparison with `<` is exact.
 #' No epsilon is needed, provided both sides carry full precision.
 #'
