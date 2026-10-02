@@ -27,11 +27,54 @@ raw <- utils::read.csv(
   colClasses = c(value_published = "character", scale_to_db_unit = "character")
 )
 
-# Convert using explicit precision preservation: parse as decimal strings first
-# then round to 11 significant figures to match the published precision exactly
-raw$value_published  <- signif(as.numeric(raw$value_published), 11)
+# Parse the decimal strings straight to double. Do NOT apply signif() here.
+#
+# An earlier revision used signif(as.numeric(x), 11) to "match the published
+# precision". That was wrong on two counts, and it is a trap worth naming so it
+# is not reintroduced:
+#
+#   1. The published cut-offs do not all carry 11 significant digits. Of the 616
+#      values, 198 carry MORE - up to 14, e.g. "1726.3821057877". Rounding to 11
+#      destroys published digits on every one of those.
+#   2. signif() is itself floating-point arithmetic (a pow/round/divide chain),
+#      so it cannot deliver the cross-platform determinism it was reached for.
+#      It altered 234 of 616 values on the machine where this was tested.
+#
+# The cross-platform problem it was meant to solve is real, but it belongs in
+# the TESTS, not the data: a decimal string and a binary double are not the same
+# object, and two correctly-rounded parsers may land one ULP apart. See
+# expect_published_biodiv() in tests/testthat/test-reference_values.R, which
+# compares at published decimal precision AND at machine precision instead of
+# demanding bit-for-bit identity.
+raw$value_published  <- as.numeric(raw$value_published)
 raw$scale_to_db_unit <- as.numeric(raw$scale_to_db_unit)
 stopifnot(!anyNA(raw$value_published), !anyNA(raw$scale_to_db_unit))
+
+# Guard: every parsed value must still print back to exactly the digits that
+# were published. This is what "no precision was lost" actually means, and it
+# would have failed loudly under the signif() version above.
+.published_digits <- function(s) {
+  d <- sub("[eE].*$", "", s)
+  d <- gsub("[-.]", "", d)
+  d <- sub("^0+", "", d)
+  nchar(sub("0+$", "", d))
+}
+.roundtrip_ok <- mapply(
+  function(txt, num) {
+    nd <- .published_digits(txt)
+    isTRUE(all.equal(as.numeric(txt), num, tolerance = 0)) &&
+      identical(as.numeric(sprintf(paste0("%.", max(nd - 1L, 0L), "e"), num)),
+                as.numeric(txt))
+  },
+  utils::read.csv("data-raw/eiof_cutoffs.csv", stringsAsFactors = FALSE,
+                  colClasses = c(value_published = "character"))$value_published,
+  raw$value_published
+)
+if (!all(.roundtrip_ok)) {
+  stop(sum(!.roundtrip_ok), " value(s) no longer round-trip to their published ",
+       "digits. Something is rounding the cut-offs; do not proceed.")
+}
+rm(.published_digits, .roundtrip_ok)
 
 # ---- 2. harmonised value ---------------------------------------------------- #
 # `value` is what the metric functions compare against. It equals the published
