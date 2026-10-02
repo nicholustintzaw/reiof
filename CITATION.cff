@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite both the package and the methods paper it implements."
+title: "reiof: Dietary Environmental Impact Metrics from the Intake EIOF Framework"
+abstract: >-
+  An R implementation of the absolute threshold, relative benchmark and
+  composite dietary environmental impact metrics defined in Intake's
+  Environmental Impacts of Foods methods paper. The package implements the
+  published metric cut-offs; it does not contain the Environmental Impacts of
+  Foods database.
+type: software
+authors:
+  - given-names: "Nicholus Tint"
+    family-names: "Zaw"
+    email: "n.t.zaw@cgiar.org"
+version: 0.0.0.9000
+license: MIT
+repository-code: "https://github.com/nicholustintzaw/reiof"
+url: "https://nicholustintzaw.github.io/reiof/"
+keywords:
+  - dietary assessment
+  - environmental impact
+  - planetary health
+  - sustainable diets
+  - food systems
+references:
+  - type: report
+    title: "Methods for Assessing Healthy, Environmentally Sustainable Diets Globally"
+    authors:
+      - name: "Intake - Center for Dietary Assessment"
+    year: 2026
+    notes: "Source of the metric definitions and cut-offs implemented by this package."

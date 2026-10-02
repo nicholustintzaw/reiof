@@ -1,0 +1,617 @@
+metric,table,indicator,indicator_label,unit,demogroup,demogroup_label,sex,age_min,age_max,row_order,percentile,value_published,scale_to_db_unit
+abs,3,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,7,,3.6896027444E-13,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,7,,5.7244838747E-13,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,7,,7.8836516181E-13,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,7,,1.2844358718E-12,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,7,,3.5749209701E-13,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,7,,5.3018709712E-13,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,7,,7.2382064564E-13,1
+abs,3,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,7,,1.0331732910E-12,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,5,,0.0076827204,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,5,,0.0119198764,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,5,,0.0164158298,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,5,,0.0267453228,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,5,,0.0074439228,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,5,,0.0110398856,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,5,,0.0150718438,1
+abs,3,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,5,,0.0215133770,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,4,,0.6155661134,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,4,,0.9550617056,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,4,,1.3152930335,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,4,,2.1429277142,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,4,,0.5964328302,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,4,,0.8845537944,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,4,,1.2076082237,1
+abs,3,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,4,,1.7237261333,1
+abs,3,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,2,,1.6010409852,1
+abs,3,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,2,,2.4840433883,1
+abs,3,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,2,,3.4209778744,1
+abs,3,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,2,,5.5735931918,1
+abs,3,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,2,,1.5512767603,1
+abs,3,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,2,,2.3006576348,1
+abs,3,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,2,,3.1408978145,1
+abs,3,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,2,,4.4832815301,1
+abs,3,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,3,,2.4888220055,1
+abs,3,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,3,,3.8614513335,1
+abs,3,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,3,,5.3179182123,1
+abs,3,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,3,,8.6641638243,1
+abs,3,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,3,,2.4114633999,1
+abs,3,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,3,,3.5763777451,1
+abs,3,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,3,,4.8825330955,1
+abs,3,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,3,,6.9692717624,1
+abs,3,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,1,,4.0898629907,1
+abs,3,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,1,,6.3454947218,1
+abs,3,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,1,,8.7388960867,1
+abs,3,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,1,,14.2377570161,1
+abs,3,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,1,,3.9627401602,1
+abs,3,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,1,,5.8770353799,1
+abs,3,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,1,,8.0234309100,1
+abs,3,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,1,,11.4525532925,1
+abs,3,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,6,,616.5145973870,1
+abs,3,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,6,,956.5332952639,1
+abs,3,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,6,,1317.3196791151,1
+abs,3,water,"Water use",litres,4,"Male 10+ yr",1,10,999,6,,2146.2296058565,1
+abs,3,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,6,,597.3518330490,1
+abs,3,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,6,,885.9167432645,1
+abs,3,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,6,,1209.4689451525,1
+abs,3,water,"Water use",litres,8,"Female 10+ yr",2,10,999,6,,1726.3821057877,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,1,10,2.0227051058E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,2,20,2.0556964609E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,3,30,2.4234271970E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,4,40,2.5759100544E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,5,50,2.5967565274E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,6,60,3.5180273670E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,7,70,4.4164767169E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,8,80,7.1655279702E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,9,90,1.0457681337E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,1,"Male 0-1.9 yr",1,0,1.9,10,,1.0457681337E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,1,10,3.1382627247E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,2,20,3.1894493952E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,3,30,3.7599901323E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,4,40,3.9965699808E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,5,50,4.0289136521E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,6,60,5.4582816440E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,7,70,6.8522416912E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,8,80,1.1117443303E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,9,90,1.6225277442E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,2,"Male 2-4.9 yr",1,2,4.9,10,,1.6225277442E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,1,10,4.3219564503E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,2,20,4.3924497712E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,3,30,5.1781877527E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,4,40,5.5040010742E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,5,50,5.5485441705E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,6,60,7.5170429084E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,7,70,9.4367784901E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,8,80,1.5310733998E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,9,90,2.2345147189E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,3,"Male 5-9.9 yr",1,5,9.9,10,,2.2345147189E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,1,10,7.0415033162E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,2,20,7.1563538377E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,3,30,8.4365094030E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,4,40,8.9673374226E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,5,50,9.0399088065E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,6,60,1.2247065230E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,7,70,1.5374774780E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,8,80,2.4944856677E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,9,90,3.6405602379E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,4,"Male 10+ yr",1,10,999,10,,3.6405602379E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,1,10,1.9598345405E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,2,20,1.9918004445E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,3,30,2.3481012202E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,4,40,2.4958445417E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,5,50,2.5160430559E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,6,60,3.4086785703E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,7,70,4.2792019420E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,8,80,6.9428060356E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,9,90,1.0132631315E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,5,"Female 0-1.9 yr",2,0,1.9,10,,1.0132631315E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,1,10,2.9065788993E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,2,20,2.9539866882E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,3,30,3.4824069682E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,4,40,3.7015211902E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,5,50,3.7314770737E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,6,60,5.0553212542E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,7,70,6.3463714992E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,8,80,1.0296692455E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,9,90,1.5027438168E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,6,"Female 2-4.9 yr",2,2,4.9,10,,1.5027438168E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,1,10,3.9681120626E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,2,20,4.0328340004E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,3,30,4.7542425566E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,4,40,5.0533811032E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,5,50,5.0942773963E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,6,60,6.9016124948E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,7,70,8.6641767424E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,8,80,1.4057223612E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,9,90,2.0515719934E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,7,"Female 5-9.9 yr",2,5,9.9,10,,2.0515719934E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,1,10,5.6640376639E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,2,20,5.7564210159E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,3,30,6.7861513180E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,4,40,7.2131382499E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,5,50,7.2715131498E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,6,60,9.8512825483E-13,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,7,70,1.2367146548E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,8,80,2.0065119818E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,9,90,2.9283903421E-12,1
+rel,4g,biodiv,"Biodiversity loss",PDF*year,8,"Female 10+ yr",2,10,999,10,,2.9283903421E-12,1
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,1,10,5.2983678949,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,2,20,5.3786920121,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,3,30,6.2816243984,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,4,40,7.2333838020,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,5,50,8.8173609774,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,6,60,10.3411219636,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,7,70,10.3943105830,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,8,80,10.4200404341,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,9,90,13.9957960683,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,1,"Male 0-1.9 yr",1,0,1.9,10,,13.9957960683,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,1,10,8.2205114421,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,2,20,8.3451357297,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,3,30,9.7460512872,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,4,40,11.2227228249,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,5,50,13.6802914108,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,6,60,16.0444335147,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,7,70,16.1269565978,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,8,80,16.1668769165,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,9,90,21.7147249876,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,2,"Male 2-4.9 yr",1,2,4.9,10,,21.7147249876,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,1,10,11.3211338786,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,2,20,11.4927641056,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,3,30,13.4220786854,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,4,40,15.4557229777,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,5,50,18.8402402516,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,6,60,22.0960923303,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,7,70,22.2097415696,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,8,80,22.2647190823,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,9,90,29.9051111909,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,3,"Male 5-9.9 yr",1,5,9.9,10,,29.9051111909,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,1,10,18.4448415122,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,2,20,18.7244683031,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,3,30,21.8677843378,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,4,40,25.1810784888,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,5,50,30.6952686204,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,6,60,35.9998322995,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,7,70,36.1849941596,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,8,80,36.2745657096,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,9,90,48.7225963614,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,4,"Male 10+ yr",1,10,999,10,,48.7225963614,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,1,10,5.1336818100,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,2,20,5.2115092594,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,3,30,6.0863763240,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,4,40,7.0085527440,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,5,50,8.5432960790,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,6,60,10.0196948895,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,7,70,10.0712302780,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,8,80,10.0961603831,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,9,90,13.5607728865,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,5,"Female 0-1.9 yr",2,0,1.9,10,,13.5607728865,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,1,10,7.6136280470,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,2,20,7.7290518839,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,3,30,9.0265441452,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,4,40,10.3941996634,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,5,50,12.6703370113,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,6,60,14.8599451344,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,7,70,14.9363759094,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,8,80,14.9733490905,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,9,90,20.1116244851,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,6,"Female 2-4.9 yr",2,2,4.9,10,,20.1116244851,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,1,10,10.3942574207,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,2,20,10.5518360502,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,3,30,12.3231950504,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,4,40,14.1903421491,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,5,50,17.2977644415,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,6,60,20.2870555313,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,7,70,20.3914001545,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,8,80,20.4418765844,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,9,90,27.4567395145,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,7,"Female 5-9.9 yr",2,5,9.9,10,,27.4567395145,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,1,10,14.8366438725,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,2,20,15.0615698016,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,3,30,17.5899873299,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,4,40,20.2551316918,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,5,50,24.6906306455,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,6,60,28.9575104750,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,7,70,29.1064507938,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,8,80,29.1785002711,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,9,90,39.1914351923,0.001
+rel,4f,eutroph,"Eutrophication potential",kg PO4(3-)eq,8,"Female 10+ yr",2,10,999,10,,39.1914351923,0.001
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,1,10,0.8921758398,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,2,20,1.0205128684,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,3,30,1.3009831796,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,4,40,1.6568345960,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,5,50,1.8945165967,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,6,60,1.8965063330,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,7,70,1.9357180649,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,8,80,2.5694472615,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,9,90,2.8988099276,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,1,"Male 0-1.9 yr",1,0,1.9,10,,2.8988099276,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,1,10,1.3842265855,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,2,20,1.5833437537,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,3,30,2.0184983991,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,4,40,2.5706081616,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,5,50,2.9393759870,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,6,60,2.9424630980,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,7,70,3.0033007932,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,8,80,3.9865428435,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,9,90,4.4975548416,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,2,"Male 2-4.9 yr",1,2,4.9,10,,4.4975548416,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,1,10,1.9063308412,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,2,20,2.1805512635,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,3,30,2.7798380637,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,4,40,3.5401932534,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,5,50,4.0480533727,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,6,60,4.0523048840,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,7,70,4.1360894146,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,8,80,5.4901918891,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,9,90,6.1939480100,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,3,"Male 5-9.9 yr",1,5,9.9,10,,6.1939480100,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,1,10,3.1058700138,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,2,20,3.5526408305,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,3,30,4.5290227167,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,4,40,5.7678236281,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,5,50,6.5952495300,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,6,60,6.6021762612,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,7,70,6.7386813503,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,8,80,8.9448389491,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,9,90,10.0914264069,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,4,"Male 10+ yr",1,10,999,10,,10.0914264069,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,1,10,0.8644448576,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,2,20,0.9887928610,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,3,30,1.2605454767,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,4,40,1.6053361707,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,5,50,1.8356304402,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,6,60,1.8375583307,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,7,70,1.8755512672,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,8,80,2.4895826281,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,9,90,2.8087079061,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,5,"Female 0-1.9 yr",2,0,1.9,10,,2.8087079061,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,1,10,1.2820353610,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,2,20,1.4664526041,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,3,30,1.8694817388,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,4,40,2.3808317201,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,5,50,2.7223750752,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,6,60,2.7252342787,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,7,70,2.7815806004,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,8,80,3.6922343114,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,9,90,4.1655205915,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,6,"Female 2-4.9 yr",2,2,4.9,10,,4.1655205915,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,1,10,1.7502569711,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,2,20,2.0020265987,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,3,30,2.5522489825,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,4,40,3.2503528701,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,5,50,3.7166337983,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,6,60,3.7205372326,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,7,70,3.7974622110,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,8,80,5.0407024947,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,9,90,5.6868411554,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,7,"Female 5-9.9 yr",2,5,9.9,10,,5.6868411554,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,1,10,2.4982967340,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,2,20,2.8576698138,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,3,30,3.6430509361,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,4,40,4.6395164216,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,5,50,5.3050804726,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,6,60,5.3106521900,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,7,70,5.4204540222,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,8,80,7.1950409494,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,9,90,8.1173318657,1
+rel,4d,ghg,"Greenhouse gas emissions",kg CO2eq,8,"Female 10+ yr",2,10,999,10,,8.1173318657,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,1,10,1.1010661656,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,2,20,1.1094124350,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,3,30,1.1922043978,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,4,40,1.5327372949,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,5,50,1.5742142619,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,6,60,1.5756730395,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,7,70,1.7890963943,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,8,80,2.0815615602,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,9,90,2.4767654159,1
+rel,4b,landarable,"Arable land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,10,,2.4767654159,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,1,10,1.7083236182,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,2,20,1.7212730027,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,3,30,1.8497261963,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,4,40,2.3780690054,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,5,50,2.4424212530,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,6,60,2.4446845721,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,7,70,2.7758146796,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,8,80,3.2295795541,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,9,90,3.8427453218,1
+rel,4b,landarable,"Arable land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,10,,3.8427453218,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,1,10,2.3526711842,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,2,20,2.3705048332,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,3,30,2.5474081576,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,4,40,3.2750319457,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,5,50,3.3636566518,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,6,60,3.3667736523,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,7,70,3.8227998138,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,8,80,4.4477162718,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,9,90,5.2921566445,1
+rel,4b,landarable,"Arable land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,10,,5.2921566445,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,1,10,3.8330654499,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,2,20,3.8621207400,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,3,30,4.1503386709,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,4,40,5.3358122812,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,5,50,5.4802031765,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,6,60,5.4852815177,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,7,70,6.2282574743,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,8,80,7.2463962182,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,9,90,8.6221920535,1
+rel,4b,landarable,"Arable land use",m2*year,4,"Male 10+ yr",1,10,999,10,,8.6221920535,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,1,10,1.0668423669,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,2,20,1.0749292141,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,3,30,1.1551478025,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,4,40,1.4850961138,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,5,50,1.5252838764,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,6,60,1.5266973116,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,7,70,1.7334869526,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,8,80,2.0168615940,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,9,90,2.3997815583,1
+rel,4b,landarable,"Arable land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,10,,2.3997815583,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,1,10,1.5822057672,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,2,20,1.5941991568,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,3,30,1.7131692288,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,4,40,2.2025068641,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,5,50,2.2621082746,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,6,60,2.2642045030,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,7,70,2.5708887636,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,8,80,2.9911542179,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,9,90,3.5590527141,1
+rel,4b,landarable,"Arable land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,10,,3.5590527141,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,1,10,2.1600548300,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,2,20,2.1764284141,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,3,30,2.3388484254,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,4,40,3.0069006753,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,5,50,3.0882695575,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,6,60,3.0911313650,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,7,70,3.5098220512,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,8,80,4.0835757583,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,9,90,4.8588806619,1
+rel,4b,landarable,"Arable land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,10,,4.8588806619,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,1,10,3.0832374993,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,2,20,3.1066089656,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,3,30,3.3384454277,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,4,40,4.2920155499,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,5,50,4.4081605594,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,6,60,4.4122454706,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,7,70,5.0098797559,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,8,80,5.8288492193,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,9,90,6.9355105498,1
+rel,4b,landarable,"Arable land use",m2*year,8,"Female 10+ yr",2,10,999,10,,6.9355105498,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,1,10,0.0634497703,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,2,20,0.0652932324,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,3,30,0.7043073847,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,4,40,1.4858770438,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,5,50,2.8776959811,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,6,60,2.9214176052,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,7,70,3.0921523961,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,8,80,6.7655599302,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,9,90,8.3067482735,1
+rel,4c,landpasture,"Pasture land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,10,,8.3067482735,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,1,10,0.0984434401,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,2,20,0.1013036041,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,3,30,1.0927453566,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,4,40,2.3053644976,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,5,50,4.4647961804,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,6,60,4.5326310530,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,7,70,4.7975290990,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,8,80,10.4968858187,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,9,90,12.8880667751,1
+rel,4c,landpasture,"Pasture land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,10,,12.8880667751,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,1,10,0.1355744557,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,2,20,0.1395134199,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,3,30,1.5049083703,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,4,40,3.1749046638,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,5,50,6.1488333974,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,6,60,6.2422543092,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,7,70,6.6070669203,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,8,80,14.4561138926,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,9,90,17.7492033708,1
+rel,4c,landpasture,"Pasture land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,10,,17.7492033708,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,1,10,0.2208832945,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,2,20,0.2273008117,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,3,30,2.4518565612,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,4,40,5.1726809317,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,5,50,10.0179238861,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,6,60,10.1701289505,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,7,70,10.7644961637,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,8,80,23.5524756168,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,9,90,28.9177079481,1
+rel,4c,landpasture,"Pasture land use",m2*year,4,"Male 10+ yr",1,10,999,10,,28.9177079481,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,1,10,0.0614775980,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,2,20,0.0632637608,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,3,30,0.6824158083,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,4,40,1.4396923926,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,5,50,2.7882502321,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,6,60,2.8306128824,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,7,70,2.9960408233,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,8,80,6.5552699693,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,9,90,8.0485544525,1
+rel,4c,landpasture,"Pasture land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,10,,8.0485544525,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,1,10,0.0911758036,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,2,20,0.0938248146,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,3,30,1.0120728806,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,4,40,2.1351698031,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,5,50,4.1351803550,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,6,60,4.1980072840,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,7,70,4.4433490984,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,8,80,9.7219479395,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,9,90,11.9365987582,1
+rel,4c,landpasture,"Pasture land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,10,,11.9365987582,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,1,10,0.1244747927,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,2,20,0.1280912686,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,3,30,1.3816994979,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,4,40,2.9149709486,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,5,50,5.6454201368,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,6,60,5.7311925529,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,7,70,6.0661374648,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,8,80,13.2725724043,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,9,90,16.2960522177,1
+rel,4c,landpasture,"Pasture land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,10,,16.2960522177,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,1,10,0.1776738920,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,2,20,0.1828360082,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,3,30,1.9722220221,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,4,40,4.1607961120,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,5,50,8.0582079787,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,6,60,8.1806385420,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,7,70,8.6587350692,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,8,80,18.9451176803,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,9,90,23.2607981018,1
+rel,4c,landpasture,"Pasture land use",m2*year,8,"Female 10+ yr",2,10,999,10,,23.2607981018,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,1,10,1.1645159358,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,2,20,1.1747056674,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,3,30,1.8965117825,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,4,40,3.0186143387,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,5,50,4.4519102430,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,6,60,4.4970906446,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,7,70,4.8812487905,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,8,80,8.8471214904,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,9,90,10.7835136894,1
+rel,4a,landtotal,"Total land use",m2*year,1,"Male 0-1.9 yr",1,0,1.9,10,,10.7835136894,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,1,10,1.8067670583,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,2,20,1.8225766068,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,3,30,2.9424715529,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,4,40,4.6834335030,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,5,50,6.9072174334,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,6,60,6.9773156250,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,7,70,7.5733437786,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,8,80,13.7264653728,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,9,90,16.7308120969,1
+rel,4a,landtotal,"Total land use",m2*year,2,"Male 2-4.9 yr",1,2,4.9,10,,16.7308120969,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,1,10,2.4882456400,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,2,20,2.5100182532,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,3,30,4.0523165279,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,4,40,6.4499366095,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,5,50,9.5124900492,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,6,60,9.6090279615,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,7,70,10.4298667340,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,8,80,18.9038301644,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,9,90,23.0413600153,1
+rel,4a,landtotal,"Total land use",m2*year,3,"Male 5-9.9 yr",1,5,9.9,10,,23.0413600153,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,1,10,4.0539487444,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,2,20,4.0894215517,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,3,30,6.6021952321,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,4,40,10.5084932129,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,5,50,15.4981270626,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,6,60,15.6554104682,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,7,70,16.9927536380,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,8,80,30.7988718351,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,9,90,37.5399000015,1
+rel,4a,landtotal,"Total land use",m2*year,4,"Male 10+ yr",1,10,999,10,,37.5399000015,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,1,10,1.1283199649,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,2,20,1.1381929749,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,3,30,1.8375636107,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,4,40,2.9247885064,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,5,50,4.3135341086,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,6,60,4.3573101940,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,7,70,4.7295277758,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,8,80,8.5721315633,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,9,90,10.4483360108,1
+rel,4a,landtotal,"Total land use",m2*year,5,"Female 0-1.9 yr",2,0,1.9,10,,10.4483360108,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,1,10,1.6733815707,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,2,20,1.6880239714,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,3,30,2.7252421094,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,4,40,4.3376766672,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,5,50,6.3972886296,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,6,60,6.4622117869,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,7,70,7.0142378621,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,8,80,12.7131021573,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,9,90,15.4956514723,1
+rel,4a,landtotal,"Total land use",m2*year,6,"Female 2-4.9 yr",2,2,4.9,10,,15.4956514723,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,1,10,2.284529622,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,2,20,2.3045196827,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,3,30,3.7205479233,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,4,40,5.9218716239,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,5,50,8.7336896943,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,6,60,8.8223239178,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,7,70,9.5759595160,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,8,80,17.3561481626,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,9,90,21.1549328795,1
+rel,4a,landtotal,"Total land use",m2*year,7,"Female 5-9.9 yr",2,5,9.9,10,,21.1549328795,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,1,10,3.2609113913,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,2,20,3.2894449739,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,3,30,5.3106674498,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,4,40,8.4528116619,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,5,50,12.4663685381,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,6,60,12.5928840126,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,7,70,13.6686148251,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,8,80,24.7739668996,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,9,90,30.1963086516,1
+rel,4a,landtotal,"Total land use",m2*year,8,"Female 10+ yr",2,10,999,10,,30.1963086516,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,1,10,213.1623613755,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,2,20,264.0235364957,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,3,30,287.0340018884,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,4,40,320.5294015970,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,5,50,322.4536262102,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,6,60,347.7875392367,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,7,70,381.3168617896,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,8,80,417.6314246464,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,9,90,421.7972951230,1
+rel,4e,water,"Water use",litres,1,"Male 0-1.9 yr",1,0,1.9,10,,421.7972951230,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,1,10,330.7251714995,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,2,20,409.6371837129,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,3,30,445.3383274991,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,4,40,497.3070322065,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,5,50,500.2925007062,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,6,60,539.5985145651,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,7,70,591.6198511653,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,8,80,647.9625373281,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,9,90,654.4259590080,1
+rel,4e,water,"Water use",litres,2,"Male 2-4.9 yr",1,2,4.9,10,,654.4259590080,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,1,10,455.4684912195,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,2,20,564.1446315294,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,3,30,613.3115758578,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,4,40,684.8818993877,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,5,50,688.9934305027,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,6,60,743.1249341528,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,7,70,814.7677413363,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,8,80,892.3618299311,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,9,90,901.2631328083,1
+rel,4e,water,"Water use",litres,3,"Male 5-9.9 yr",1,5,9.9,10,,901.2631328083,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,1,10,742.0673780920,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,2,20,919.1268675093,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,3,30,999.2316083859,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,4,40,1115.8368255521,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,5,50,1122.5354955442,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,6,60,1210.7286938887,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,7,70,1327.4520043058,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,8,80,1453.8713790573,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,9,90,1468.3737356748,1
+rel,4e,water,"Water use",litres,4,"Male 10+ yr",1,10,999,10,,1468.3737356748,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,1,10,206.5367597854,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,2,20,255.8170466073,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,3,30,278.1122910993,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,4,40,310.5665727974,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,5,50,312.4309878571,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,6,60,336.9774616127,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,7,70,369.4646117512,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,8,80,404.6504301905,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,9,90,408.6868153402,1
+rel,4e,water,"Water use",litres,5,"Female 0-1.9 yr",2,0,1.9,10,,408.6868153402,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,1,10,306.3092192412,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,2,20,379.3955124321,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,3,30,412.4610013079,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,4,40,460.5930902315,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,5,50,463.3581550164,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,6,60,499.7623826174,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,7,70,547.9432178578,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,8,80,600.1263768542,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,9,90,606.1126331752,1
+rel,4e,water,"Water use",litres,6,"Female 2-4.9 yr",2,2,4.9,10,,606.1126331752,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,1,10,418.1786732249,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,2,20,517.9573517551,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,3,30,563.0989322203,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,4,40,628.8096970986,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,5,50,632.5846116311,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,6,60,682.2842962689,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,7,70,748.0616104667,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,8,80,819.3029666619,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,9,90,827.4755079000,1
+rel,4e,water,"Water use",litres,7,"Female 5-9.9 yr",2,5,9.9,10,,827.4755079000,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,1,10,596.9034437560,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,2,20,739.3263855307,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,3,30,803.7609599400,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,4,40,897.5557523554,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,5,50,902.9440220799,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,6,60,973.8847821266,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,7,70,1067.7745662776,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,8,80,1169.4636613307,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,9,90,1181.1290529961,1
+rel,4e,water,"Water use",litres,8,"Female 10+ yr",2,10,999,10,,1181.1290529961,1

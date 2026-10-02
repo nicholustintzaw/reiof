@@ -1,0 +1,162 @@
+---
+title: "Understanding the relative benchmark metrics"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Understanding the relative benchmark metrics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(reiof)
+grp <- eiof_age_sex_group(eiof_demo$age, eiof_demo$sex)
+```
+
+The relative benchmark metrics are the part of the Intake framework most often
+misread, and the misreading changes what the numbers mean. This vignette is
+about that one idea.
+
+## The reference distribution is external and fixed
+
+`eiof_relative_band()` does **not** rank respondents against each other in your
+survey. Each one-day diet is compared against a reference distribution that is
+the same for every analysis anywhere in the world.
+
+Intake built it in three steps:
+
+1. For each country, average dietary environmental impact per person per day at
+   each decile, from the Planet-Based Diets Database (WWF, 2020).
+2. Those country values population-weighted, using 2010 country populations, to
+   give a global percentile distribution of impacts per person per day.
+3. The resulting all-population decile values scaled to each demographic group
+   by its share of average energy requirements.
+
+The result is a fixed table of numbers, printed in the paper and shipped in this
+package:
+
+```{r}
+subset(eiof_cutoffs,
+       metric == "rel" & indicator == "biodiv" & demogroup == 4 &
+         !is.na(percentile),
+       select = c(percentile, value))
+```
+
+Your data never changes those numbers.
+
+## Why `quantile()` is the wrong tool
+
+This is the practical consequence. If you compute deciles from your own sample,
+you get roughly 10% of observations in each band **by construction**:
+
+```{r}
+# WRONG: ranks the sample against itself
+wrong <- cut(eiof_demo$biodiv,
+             breaks = quantile(eiof_demo$biodiv, seq(0, 1, 0.1), na.rm = TRUE),
+             labels = 1:10, include.lowest = TRUE)
+table(wrong)
+```
+
+```{r}
+# RIGHT: compares against the published global reference
+right <- eiof_relative_band(eiof_demo$biodiv, grp, "biodiv")
+table(right)
+```
+
+The first is flat because it has to be. The second is not, and that shape is the
+information: it tells you where this population sits relative to global dietary
+patterns. The first tells you only that some of your respondents have higher
+impacts than others, which you already knew.
+
+If your whole sample has unusually low impacts, your whole sample lands in low
+bands. That is the intended behaviour, and is exactly why the metric is
+comparable across countries and over time.
+
+## How the bands are defined
+
+Each table gives ten rows. Rows 1–9 carry the P10…P90 cut-points; row 10 repeats
+the P90 value as a lower bound.
+
+| Band | Condition |
+|---|---|
+| 1 | impact < P10 |
+| 2 | P10 ≤ impact < P20 |
+| … | … |
+| 9 | P80 ≤ impact < P90 |
+| 10 | impact ≥ P90 |
+
+The inequality is strict, so a diet sitting exactly on P10 belongs in band 2:
+
+```{r}
+p10 <- unname(eiof_lookup_cutoff("biodiv", 4, "rel", percentile = 10))
+eiof_relative_band(c(p10 * (1 - 1e-9), p10), c(4L, 4L), "biodiv")
+```
+
+## Reporting
+
+The paper gives two forms. The first is the distribution:
+
+> *"x% of one-day diets fall between the 10th and 20th percentile of global per
+> capita dietary total land use."*
+
+```{r}
+round(100 * prop.table(table(eiof_relative_band(eiof_demo$landtotal, grp,
+                                                "landtotal"))), 1)
+```
+
+The second is a mean position, for which `midpoint = TRUE` gives band midpoints
+(5, 15, … 95):
+
+```{r}
+mid <- eiof_relative_band(eiof_demo$landtotal, grp, "landtotal",
+                          midpoint = TRUE)
+mean(mid, na.rm = TRUE)
+```
+
+### A caution on that mean
+
+Averaging a band index treats the bands as equally spaced on the impact scale.
+They are emphatically not:
+
+```{r}
+p <- vapply(seq(10, 90, 10),
+            function(q) unname(eiof_lookup_cutoff("landpasture", 4, "rel", q)),
+            numeric(1))
+round(diff(p), 3)
+```
+
+In pasture land use the P10–P20 gap is a fraction of a square metre-year while
+the P80–P90 gap is several. A mean band is a legitimate summary of *position in
+the reference distribution*. It is not a summary of impact. If you want a mean
+impact, average the impact variable itself.
+
+## The limitation the paper states about itself
+
+The reference distribution is built from **Food Balance Sheet data** — national
+availability averages, not individual consumption. It therefore captures
+variation *between countries*, not variation between people or between days.
+
+The authors' argument is reasonable: for assessment, monitoring and
+cross-country comparison, this matters less so long as the reference
+distribution stays fixed, because it still provides a consistent yardstick. But
+it does mean a band is a statement about where a diet sits relative to *national
+average availability patterns*, not relative to other individuals. That
+distinction belongs in the methods section of anything you publish using these.
+
+## And the thing worth repeating
+
+A low band is not evidence of sustainability. The reference distribution
+describes diets as they are, and most of them exceed the planetary boundaries.
+For greenhouse gas emissions, every band — including band 1 — lies above the
+Table 3 absolute threshold:
+
+```{r}
+thr <- unname(eiof_lookup_cutoff("ghg", 4, "abs"))
+p10 <- unname(eiof_lookup_cutoff("ghg", 4, "rel", percentile = 10))
+c(absolute_threshold = thr, reference_P10 = p10, threshold_is_lower = thr < p10)
+```
+
+So "this population is in the lowest decile globally for dietary greenhouse gas
+emissions" and "this population's diets are within the planetary boundary" can
+both be false at the same time, or the first true and the second false. Report
+the absolute and relative metrics side by side.

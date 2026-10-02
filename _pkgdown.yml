@@ -1,0 +1,80 @@
+url: https://nicholustintzaw.github.io/reiof/
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#2a6f4e"
+
+home:
+  title: Dietary environmental impact metrics for R
+  description: >
+    Implements the absolute threshold, relative benchmark and composite dietary
+    environmental impact metrics defined in Intake's Environmental Impacts of
+    Foods methods paper. Age- and sex-specific cut-offs, a data quality check
+    suite, and no dependencies.
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github]
+
+articles:
+  - title: Using the package
+    navbar: ~
+    contents:
+      - reiof
+      - relative-benchmarks
+      - troubleshooting
+
+reference:
+  - title: Demographic group
+    desc: >
+      The eight-category age and sex variable every cut-off is scaled by.
+      Required by all the metric functions.
+    contents:
+      - eiof_age_sex_group
+      - eiof_as_sex_factor
+
+  - title: Metrics
+    desc: The three metric families from the methods paper.
+    contents:
+      - eiof_absolute_threshold
+      - eiof_relative_band
+      - eiof_hesd
+      - eiof_hdlei
+
+  - title: Decomposed sub-indicators
+    desc: >
+      The individual criteria behind the composite metrics, exported so each
+      can be reported on its own.
+    contents:
+      - eiof_healthy_diet
+      - eiof_sustainable_diet
+      - eiof_low_impact
+
+  - title: Data quality checks
+    desc: >
+      Run these before computing anything. They report rather than stop, so one
+      pass finds every problem.
+    contents:
+      - eiof_check_data
+      - eiof_check_impact
+      - eiof_check_precision
+      - eiof_check_magnitude
+      - eiof_check_demographics
+      - eiof_check_gdqs
+
+  - title: Reference lookups
+    contents:
+      - eiof_list_indicators
+      - eiof_lookup_cutoff
+
+  - title: Data
+    contents:
+      - eiof_cutoffs
+      - eiof_indicators
+      - eiof_demo
+
+  - title: Package
+    contents:
+      - reiof-package

@@ -1,0 +1,265 @@
+---
+title: "Troubleshooting: fixing a broken dataset"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Troubleshooting: fixing a broken dataset}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(reiof)
+```
+
+This vignette works through a dataset with four real faults in it — the kinds
+that arrive from a spreadsheet, a database export or another statistical
+package. We run the checks, read the errors, fix each one, and re-run.
+
+The point is not the fixes themselves. It is that **all four faults produce
+plausible-looking numbers rather than obvious failures** if you skip the checks.
+
+## The data
+
+A copy of `eiof_demo` ships with the package, broken on purpose:
+
+```{r}
+path <- system.file("extdata", "eiof_broken.csv", package = "reiof")
+broken <- read.csv(path, stringsAsFactors = FALSE)
+str(broken[, c("age", "sex", "ghg", "water", "biodiv", "gdqs")])
+```
+
+Nothing there looks alarming. `biodiv` is a character column, but that is easy
+to miss in a `str()` dump of eleven variables, and `head()` would show values
+that read like numbers.
+
+## Run the checks first
+
+```{r}
+report <- eiof_check_data(
+  broken,
+  impacts = c(biodiv = "biodiv", ghg = "ghg", water = "water"),
+  age = "age", sex = "sex", gdqs = "gdqs"
+)
+report
+```
+
+Four problems, found in one pass. Taking them in turn.
+
+## Fault 1 — biodiversity imported as text
+
+The column is `character` because two cells contain `"<1e-14"`, a
+left-censored value someone entered by hand. One cell is enough to change the
+type of the whole column.
+
+Why this is an `error` and not a warning:
+
+```{r}
+as.numeric("<1e-14")
+```
+
+Silent `NA`. Those respondents would simply drop out of every biodiversity
+metric, and nothing would say so. Worse is what happens if the column arrives
+as a **factor** instead:
+
+```{r}
+as.numeric(factor(c("3.7e-13", "5.2e-13", "1.1e-13")))
+```
+
+Those are level codes, not values. `3.7e-13` becomes `1`. That is a
+plausible-looking number with no warning at all, and every downstream
+calculation would run happily and be completely wrong. This is the single most
+destructive failure mode in the list, which is why `reiof` refuses to coerce
+anything for you.
+
+Note also that the magnitude and precision checks for `biodiv` do not appear in
+the report above. Once a column fails the type check there is nothing numeric to
+measure, so those checks are skipped rather than run on garbage. Fix the type,
+re-run, and they appear.
+
+**The fix** is a decision, not a conversion. What does `<1e-14` mean? If it is a
+detection limit, you choose how to treat it; here we set it to missing and say
+so.
+
+```{r}
+fixed <- broken
+censored <- grepl("<", fixed$biodiv, fixed = TRUE)
+sum(censored)
+fixed$biodiv[censored] <- NA
+fixed$biodiv <- as.numeric(fixed$biodiv)
+```
+
+```{r}
+eiof_check_impact(fixed$biodiv, name = "biodiv", indicator = "biodiv")
+```
+
+## Fault 2 — greenhouse gases in the wrong unit
+
+```{r}
+subset(report, variable == "ghg" & check == "magnitude")$message
+```
+
+The check compares the median of your data against the published global 50th
+percentile for that indicator. A ratio near 1000 is named as a likely
+gram/kilogram error rather than left for you to spot.
+
+Note that it reports an *unweighted* expectation here. Normally the expected
+median is weighted to your sample's demographic mix, but the sex variable is
+broken (fault 3), so no demographic group could be built. The check falls back
+to an unweighted average rather than skipping, because a unit error and a sex
+coding error are independent faults — you should not have to fix one to see the
+other, and a factor of 1000 dwarfs any demographic weighting anyway.
+
+This matters because the metric would otherwise run perfectly and report that
+not one diet in the sample meets the greenhouse gas threshold — a result that
+looks like a finding:
+
+```{r}
+grp_tmp <- eiof_age_sex_group(broken$age, broken$sex, male = 1, female = 0)
+table(eiof_absolute_threshold(broken$ghg, grp_tmp, "ghg"), useNA = "ifany")
+```
+
+Zero diets below the threshold. Nothing errored. You could put that in a report.
+
+**The fix:**
+
+```{r}
+fixed$ghg <- fixed$ghg / 1000
+eiof_check_magnitude(fixed$ghg, "ghg", grp_tmp, name = "ghg")
+```
+
+## Fault 3 — sex coded 0/1 with no labels
+
+```{r, error = TRUE}
+eiof_age_sex_group(broken$age, broken$sex)
+```
+
+`reiof` will not guess. The reason is visible if you try it both ways:
+
+```{r}
+a <- eiof_age_sex_group(broken$age, broken$sex, male = 1, female = 0)
+b <- eiof_age_sex_group(broken$age, broken$sex, male = 0, female = 1)
+table(guess_A = factor(a, 1:8), guess_B = factor(b, 1:8))[1:4, 5:8]
+```
+
+The two readings are exact mirror images. Had the package picked one and been
+wrong, every result would have been computed for the opposite sex, with no
+error and nothing visibly odd in the output.
+
+**The fix** — convert once, and the ambiguity is gone from the rest of the
+script:
+
+```{r}
+fixed$sex <- eiof_as_sex_factor(broken$sex, male = 1, female = 0)
+levels(fixed$sex)
+grp <- eiof_age_sex_group(fixed$age, fixed$sex)
+```
+
+## Fault 4 — water rounded to four significant digits
+
+```{r}
+subset(report, variable == "water" & check == "precision")$message
+```
+
+This is what an Excel round trip does: the file displays `604.1` and saves what
+it displays.
+
+Does it matter? That is an empirical question, and the proximity check answers
+it rather than leaving you to worry:
+
+```{r}
+eiof_check_precision(broken$water, grp, "water", name = "water")
+```
+
+Here, no observation sits close enough to the water threshold for the rounding
+to change its classification — so for *this* analysis the lost digits are
+harmless. For a different indicator or a different sample the answer could be
+different, and you would get the row numbers.
+
+There is no fix in code. Digits that were never read cannot be recovered; you
+would have to go back to the source export. Worth knowing is not the same as
+worth panicking about:
+
+```{r}
+nsig <- function(v) { for (d in 1:17) if (signif(v, d) == v) return(d); 17L }
+c(broken = max(vapply(broken$water[1:50], nsig, integer(1))),
+  demo   = max(vapply(eiof_demo$water[1:50], nsig, integer(1))))
+```
+
+## Re-run the checks
+
+```{r}
+report2 <- eiof_check_data(
+  fixed,
+  impacts = c(biodiv = "biodiv", ghg = "ghg", water = "water"),
+  age = "age", sex = "sex", gdqs = "gdqs"
+)
+report2
+```
+
+No blocking problems. The remaining items are notes and the water precision
+warning, which we have looked at and accepted.
+
+```{r}
+summary(report2)
+```
+
+## Now compute the metrics
+
+```{r}
+fixed$ghg_abs    <- eiof_absolute_threshold(fixed$ghg, grp, "ghg")
+fixed$biodiv_abs <- eiof_absolute_threshold(fixed$biodiv, grp, "biodiv")
+fixed$biodiv_bnd <- eiof_relative_band(fixed$biodiv, grp, "biodiv")
+fixed$hesd       <- eiof_hesd(fixed$biodiv, fixed$gdqs, grp, form = "binary")
+fixed$hdlei      <- eiof_hdlei(fixed$biodiv, fixed$gdqs, grp, form = "binary")
+
+round(100 * c(
+  ghg_below_threshold    = mean(fixed$ghg_abs,    na.rm = TRUE),
+  biodiv_below_threshold = mean(fixed$biodiv_abs, na.rm = TRUE),
+  hesd                   = mean(fixed$hesd,       na.rm = TRUE),
+  hdlei                  = mean(fixed$hdlei,      na.rm = TRUE)
+), 1)
+```
+
+Compare the greenhouse gas figure with the 0% we got before fixing the units.
+
+## A reusable pattern
+
+```r
+# 1. check
+report <- eiof_check_data(dat, impacts = c(...), age = "age", sex = "sex",
+                          gdqs = "gdqs")
+report
+
+# 2. stop if anything is blocking
+if (!summary(report)$pass) stop("fix the errors above before continuing")
+
+# 3. compute
+grp <- eiof_age_sex_group(dat$age, dat$sex)
+dat$biodiv_abs <- eiof_absolute_threshold(dat$biodiv, grp, "biodiv")
+# ...
+```
+
+Putting the `stop()` in writing is worth the two lines. A check you can skip is
+a check that gets skipped on the day you are in a hurry.
+
+## Error messages you may hit
+
+| Message | Cause | Fix |
+|---|---|---|
+| `cannot tell which code means male` | numeric `sex` | `eiof_as_sex_factor(x, male =, female =)` |
+| `these values of sex were not recognised` | an extra category, or a typo in a label | recode, or set `male`/`female` explicitly |
+| `is a factor. as.numeric() on a factor returns level codes` | a factor impact column | `as.numeric(as.character(x))`, then re-check |
+| `is character, not numeric` | a stray symbol, decimal comma or thousands separator | find the offending cells, decide what they mean |
+| `column is integer` | impacts read as whole numbers | re-import as double; small values are already lost |
+| `indicator must be one of` | a misspelled indicator | `eiof_list_indicators()` |
+| `group has N value(s) outside 1-8` | `group` built by hand | use `eiof_age_sex_group()` |
+| `percentile is required when metric = "rel"` | `eiof_lookup_cutoff()` without a percentile | add `percentile = 30` |
+
+## What the checks do not do
+
+They do not verify that your impact values are *correct* — only that they are
+of a plausible type, sign, magnitude and precision. If the upstream matching of
+food items to impact factors was wrong, every check here will pass and the
+results will still be wrong. The checks narrow the space of silent failures;
+they do not eliminate it.

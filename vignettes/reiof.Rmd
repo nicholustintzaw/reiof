@@ -1,0 +1,291 @@
+---
+title: "Getting started with reiof"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with reiof}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(reiof)
+```
+
+## What EIOF is
+
+Intake's **Environmental Impacts of Foods (EIOF)** database gives country-specific
+environmental impact values for more than 6,500 foods across seven impact areas
+spanning five domains of planetary health. What makes it unusual is not only its
+coverage but its adjustment factors: non-edible portion, processing and cooking
+yield, so that the *form of food consumed* in a dietary recall can be matched
+correctly to the *form of food* the impact data describes.
+
+Alongside the database, Intake published a set of **dietary environmental impact
+metrics** for use with food consumption survey data. These come in three
+families:
+
+| Family | Question it answers | Source |
+|---|---|---|
+| Absolute threshold | Is this diet below the per capita daily share of a planetary boundary? | Table 3 |
+| Relative benchmark | Where does this diet sit in a global reference distribution? | Tables 4a–4g |
+| Composite | Is this diet both healthy and environmentally sound? | Tables 5a, 5b |
+
+All of them are age- and sex-specific, because average dietary energy
+requirement differs across groups.
+
+## What reiof is — and is not
+
+`reiof` implements those metrics in R.
+
+**It does not contain the EIOF database.** It ships the published *cut-offs* and
+applies them to impact values you have already derived. The work of matching
+food items to impact factors, applying the adjustment factors, and summing to
+the respondent-day happens upstream; `reiof` starts where that ends. It also
+does not calculate the Global Diet Quality Score — the composite metrics take a
+GDQS value as an input.
+
+So the input `reiof` expects is one row per respondent-day, with the impact
+totals already summed:
+
+```{r}
+head(eiof_demo, 3)
+```
+
+The package has **no dependencies at all**. The practical consequence is a plain
+vector API: you pass `df$biodiv`, not `biodiv`.
+
+## The seven indicators, and their units
+
+Units matter more here than in most analyses, because a unit error produces a
+confidently wrong answer rather than an obvious one.
+
+```{r}
+eiof_list_indicators()
+```
+
+## Step 1 — the demographic group
+
+Every cut-off is scaled to one of eight age/sex groups. This variable is
+required by everything else.
+
+```{r}
+grp <- eiof_age_sex_group(age = eiof_demo$age, sex = eiof_demo$sex)
+table(factor(grp, 1:8, attr(grp, "labels")))
+```
+
+### Which type should `sex` be?
+
+**A factor is the recommended input**, and `eiof_demo$sex` is one. The levels
+carry the meaning, so the data documents itself, `table()` prints "male" and
+"female" rather than 1 and 2, and `reiof` can resolve it without being told
+anything further.
+
+Character works identically, and is what `read.csv()` gives you by default:
+
+```{r}
+eiof_age_sex_group(age = c(1.5, 40), sex = c("M", "F"))
+```
+
+**Numeric sex is deliberately refused** unless you say which code means male:
+
+```{r, error = TRUE}
+eiof_age_sex_group(age = c(1.5, 40), sex = c(1, 0))
+```
+
+This is not a missing feature. Survey data uses `1/2` and `0/1` about equally
+often, and the two are indistinguishable from the values alone — both are just
+two distinct numbers. If `reiof` guessed and guessed wrong, every result would
+be silently inverted: no error, nothing visibly odd, every male counted as
+female. Rather than carry that risk, it stops and asks.
+
+Say the codes and it works:
+
+```{r}
+eiof_age_sex_group(age = c(1.5, 40), sex = c(1, 0), male = 1, female = 0)
+```
+
+But the better habit is to convert once, near the top of your script, after
+which every later call is unambiguous:
+
+```{r}
+sex_f <- eiof_as_sex_factor(c(1, 0, 1, 0), male = 1, female = 0)
+sex_f
+```
+
+### A note on the age boundaries
+
+The paper prints the groups as "0-1.9", "2-4.9", "5-9.9" and "10+". `reiof`
+reads these as half-open intervals: `age < 2`, `2 <= age < 5`, `5 <= age < 10`,
+`age >= 10`. So a child aged 1.95 years is in the first group:
+
+```{r}
+eiof_age_sex_group(c(1.9, 1.95, 1.999, 2.0), rep("male", 4))
+```
+
+Testing `age <= 1.9` instead would leave everyone between 1.9 and 2.0
+unassigned, and they would then vanish from every metric with no error raised.
+
+## Step 2 — absolute threshold metrics (Table 3)
+
+```{r}
+ghg_ok <- eiof_absolute_threshold(eiof_demo$ghg, grp, "ghg")
+table(ghg_ok, useNA = "ifany")
+```
+
+Read as: *"x% of one-day diets fall below the absolute per capita daily
+threshold established for greenhouse gas emissions."*
+
+The comparison is strict — the published cut-offs carry a `<` sign, so a diet
+sitting exactly on the threshold is coded `0`, not `1`.
+
+All seven at once:
+
+```{r}
+for (ind in eiof_indicators$indicator) {
+  x <- eiof_absolute_threshold(eiof_demo[[ind]], grp, ind)
+  cat(sprintf("%-12s %5.1f%% below threshold\n", ind, 100 * mean(x, na.rm = TRUE)))
+}
+```
+
+To see which number a respondent was compared against:
+
+```{r}
+eiof_lookup_cutoff("ghg", metric = "abs")
+```
+
+## Step 3 — relative benchmark metrics (Tables 4a–4g)
+
+```{r}
+band <- eiof_relative_band(eiof_demo$biodiv, grp, "biodiv")
+table(band, useNA = "ifany")
+```
+
+**This does not rank your respondents against each other.** The bands come from
+a fixed external reference distribution, the same for every analysis anywhere in
+the world. See `vignette("relative-benchmarks")` for what that distribution is,
+how it was built, and why `quantile()` is the wrong tool.
+
+## Step 4 — the composite metrics (Tables 5a, 5b)
+
+Both combine a diet quality criterion (GDQS ≥ 23) with an environmental one.
+They differ only in the environmental criterion: HESD uses the **absolute**
+biodiversity threshold, HDLEI the **relative** 30th percentile.
+
+```{r}
+table(eiof_hesd(eiof_demo$biodiv, eiof_demo$gdqs, grp))
+```
+
+Each criterion is also available on its own, which is often what you want for
+reporting:
+
+```{r}
+parts <- eiof_hesd(eiof_demo$biodiv, eiof_demo$gdqs, grp, form = "components")
+head(parts, 4)
+```
+
+`healthy` and `env` are the two sub-indicators; `category` is the four-way
+Table 5a classification; `binary` is category 1 against everything else. The
+sub-indicators are produced by calling `eiof_healthy_diet()` and
+`eiof_sustainable_diet()` internally, so they cannot drift from the standalone
+functions.
+
+Note the message about respondents under 2 years. The methods paper restricts
+the composites to ages 2 and over, because the GDQS has not been validated below
+that age — Table 5a prints six demographic columns, not eight. If your sample
+includes under-twos, decide explicitly whether they belong in the denominator,
+because it changes every percentage you report.
+
+## Three things to know before reporting any of this
+
+### 1. Eutrophication units are unresolved
+
+The paper states eutrophication potential is in kg PO₄³⁻-eq, and the Table 3
+absolute threshold is consistent with that (0.0077–0.0267). The Table 4f
+relative benchmarks for the same quantity are 5.3–48.7 — about a thousand times
+larger.
+
+Read as grams, Table 4f places the absolute threshold between the 40th and 50th
+percentile, exactly where the two land thresholds sit. Read as kilograms, every
+diet on earth falls below the 10th percentile, which is not a coherent reading
+of a percentile distribution. `reiof` therefore applies a ÷1000 rescaling to
+relative eutrophication only.
+
+**This is an inference, not a documented conversion.** It is isolated in the
+`scale_to_db_unit` column of `eiof_cutoffs` so it can be switched off in one
+place. Confirm with Intake before publishing any eutrophication result.
+
+### 2. A low relative band is not evidence of sustainability
+
+The reference distribution describes diets as they are, not as they would need
+to be. Compare where each absolute threshold falls within it:
+
+```{r}
+for (ind in eiof_indicators$indicator) {
+  thr <- unname(eiof_lookup_cutoff(ind, 4, "abs"))
+  p   <- vapply(seq(10, 90, 10),
+                function(q) unname(eiof_lookup_cutoff(ind, 4, "rel", q)),
+                numeric(1))
+  k <- sum(thr >= p)
+  pos <- if (k == 0) "below P10" else if (k == 9) "at/above P90" else
+    sprintf("P%d-P%d", k * 10, (k + 1) * 10)
+  cat(sprintf("%-12s %s\n", ind, pos))
+}
+```
+
+For greenhouse gases the planetary-boundary threshold lies **below the 10th
+percentile**: a diet in band 1, the lowest band, still exceeds the boundary. For
+water it lies **above the 90th**, so essentially every diet passes. The two
+metric families answer different questions and will not agree. Report them
+together; never use one as a proxy for the other.
+
+### 3. HDLEI is nested inside HESD
+
+```{r}
+h <- eiof_hesd(eiof_demo$biodiv, eiof_demo$gdqs, grp, form = "binary")
+d <- eiof_hdlei(eiof_demo$biodiv, eiof_demo$gdqs, grp, form = "binary")
+table(HESD = h, HDLEI = d, useNA = "ifany")
+```
+
+The empty cell is structural, not a quirk of this sample. For biodiversity the
+relative P30 cut-off sits below the absolute threshold in every demographic
+group, by the same constant factor:
+
+```{r}
+vapply(1:8, function(g) {
+  unname(eiof_lookup_cutoff("biodiv", g, "abs")) /
+    unname(eiof_lookup_cutoff("biodiv", g, "rel", 30))
+}, numeric(1))
+```
+
+Both are the same all-population figure scaled by the same energy-requirement
+weight, so the ratio is constant by construction. Every HDLEI diet is therefore
+also a HESD diet, and HESD prevalence can never fall below HDLEI prevalence.
+Reporting both is still informative — the gap between them is the share of diets
+sitting between the two cut-offs — but they are not two independent dimensions
+and must not be presented as a 2×2.
+
+## Before you compute anything: check the data
+
+Everything above assumes your impact values are the right type, the right unit
+and the right precision. They very often are not, and the failures are quiet.
+
+```{r}
+report <- eiof_check_data(
+  eiof_demo,
+  impacts = c(biodiv = "biodiv", ghg = "ghg"),
+  age = "age", sex = "sex", gdqs = "gdqs"
+)
+summary(report)
+```
+
+`vignette("troubleshooting")` walks through a deliberately broken dataset, the
+errors it produces, and how to fix each one.
+
+## Survey weights
+
+`reiof` returns respondent-level indicator vectors and nothing else. It applies
+no survey design. Every prevalence you report should come from a design-aware
+estimator — the **survey** package, or whatever your analysis uses — or both
+your point estimates and your standard errors will be wrong for a complex
+design.

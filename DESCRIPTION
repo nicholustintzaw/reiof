@@ -1,0 +1,36 @@
+Package: reiof
+Title: Dietary Environmental Impact Metrics from the Intake EIOF Framework
+Version: 0.0.0.9000
+Authors@R:
+    person(given = c("Nicholus", "Tint"),
+           family = "Zaw",
+           email = "n.t.zaw@cgiar.org",
+           role = c("aut", "cre"))
+Description: Calculates the dietary environmental impact metrics defined in
+    Intake's Environmental Impacts of Foods methods paper: absolute threshold
+    metrics against per capita planetary boundary shares, relative benchmark
+    metrics against a fixed global reference distribution, and the two
+    composite metrics that combine diet quality with environmental impact.
+    Cut-offs are age- and sex-specific. The package does not contain the
+    Environmental Impacts of Foods database itself; it applies the published
+    metric cut-offs to impact values the user has already derived. Includes a
+    data quality check suite covering variable type, plausibility, numerical
+    precision and unit magnitude.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.5)
+Suggests:
+    covr,
+    knitr,
+    rmarkdown,
+    spelling,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Language: en-GB
+URL: https://nicholustintzaw.github.io/reiof/,
+    https://github.com/nicholustintzaw/reiof
+BugReports: https://github.com/nicholustintzaw/reiof/issues
+RoxygenNote: 7.3.1
