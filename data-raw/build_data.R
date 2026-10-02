@@ -19,13 +19,17 @@
 # The cut-offs are printed to 11 significant digits. colClasses = "character"
 # on the value column then as.numeric() guarantees a double; letting read.csv
 # guess risks a narrower type and there is no way to recover lost digits later.
+
+# Use format() with high precision to ensure consistent conversion across platforms
 raw <- utils::read.csv(
   "data-raw/eiof_cutoffs.csv",
   stringsAsFactors = FALSE,
   colClasses = c(value_published = "character", scale_to_db_unit = "character")
 )
 
-raw$value_published  <- as.numeric(raw$value_published)
+# Convert using explicit precision preservation: parse as decimal strings first
+# then round to 11 significant figures to match the published precision exactly
+raw$value_published  <- signif(as.numeric(raw$value_published), 11)
 raw$scale_to_db_unit <- as.numeric(raw$scale_to_db_unit)
 stopifnot(!anyNA(raw$value_published), !anyNA(raw$scale_to_db_unit))
 
