@@ -34,4 +34,4 @@ Language: en-GB
 URL: https://nicholustintzaw.github.io/reiof/,
     https://github.com/nicholustintzaw/reiof
 BugReports: https://github.com/nicholustintzaw/reiof/issues
-RoxygenNote: 8.1.0
+Config/roxygen2/version: 8.1.0
